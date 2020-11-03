@@ -1,0 +1,181 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <title>Quiz</title>
+    <script>
+        function evaluationFun(aAns, bAns, cAns, dAns, eAns, fAns) {
+            var scor = 0;
+            var msg;
+            if (aAns == "nile") {
+                scor = scor + 2.5;
+                document.querySelector('#aLab').setAttribute("style", "color:green;font-size:24px;");
+                document.querySelector('#aLab').innerHTML = "&#9745;";
+            } else {
+                document.querySelector('#aLab').setAttribute("style", "color:red;font-size:24px;");
+                document.querySelector('#aLab').innerHTML = "&#9746;";
+                scor = scor - 3;
+            }
+            if (bAns == "3") {
+                scor = scor + 2.5;
+                document.querySelector('#bLab').setAttribute("style", "color:green;font-size:24px;");
+                document.querySelector('#bLab').innerHTML = "&#9745;";
+            } else {
+                document.querySelector('#bLab').setAttribute("style", "color:red;font-size:24px;");
+                document.querySelector('#bLab').innerHTML = "&#9746;";
+                scor = scor - 3;
+            }
+            if (cAns == "red") {
+                scor = scor + 2.5;
+                document.querySelector('#cLab').setAttribute("style", "color:green;font-size:24px;");
+                document.querySelector('#cLab').innerHTML = "&#9745;";
+            } else {
+                document.querySelector('#cLab').setAttribute("style", "color:red;font-size:24px;");
+                document.querySelector('#cLab').innerHTML = "&#9746;";
+                scor = scor - 3;
+            }
+            if (dAns == "pacific") {
+                scor = scor + 2.5;
+                document.querySelector('#dLab').setAttribute("style", "color:green;font-size:24px;");
+                document.querySelector('#dLab').innerHTML = "&#9745;";
+            } else {
+                document.querySelector('#dLab').setAttribute("style", "color:red;font-size:24px;");
+                document.querySelector('#dLab').innerHTML = "&#9746;";
+                scor = scor - 3;
+            }
+            if (eAns == "africa") {
+                scor = scor + 2.5;
+                document.querySelector('#eLab').setAttribute("style", "color:green;font-size:24px;");
+                document.querySelector('#eLab').innerHTML = "&#9745;";
+            } else {
+                document.querySelector('#eLab').setAttribute("style", "color:red;font-size:24px;");
+                document.querySelector('#eLab').innerHTML = "&#9746;";
+                scor = scor - 3;
+            }
+            if (fAns == "cheetah") {
+                scor = scor + 2.5;
+                document.querySelector('#fLab').setAttribute("style", "color:green;font-size:24px;");
+                document.querySelector('#fLab').innerHTML = "&#9745;";
+            } else {
+                document.querySelector('#fLab').setAttribute("style", "color:red;font-size:24px;");
+                document.querySelector('#fLab').innerHTML = "&#9746;";
+                scor = scor - 3;
+            }
+            msg = "Your Score is " + scor + "/15";
+            document.querySelector('#wlm').innerHTML = msg;
+        }
+        function answerExtract() {
+            var pra_ans, prb_ans, prc_ans, prd_ans, pre_ans, prf_ans;
+            var rdls_a = document.querySelectorAll('#prb-a');
+            var rdls_b = document.querySelectorAll('#prb-b');
+            var rdls_c = document.querySelectorAll('#prb-c');
+            var rdls_d = document.querySelectorAll('#prb-d');
+            var rdls_e = document.querySelectorAll('#prb-e');
+            var rdls_f = document.querySelectorAll('#prb-f');
+            for (i = 0; i < rdls_a.length; i++) {
+                if (rdls_a[i].checked) {
+                    pra_ans = rdls_a[i].value;
+                    break;
+                }
+            }
+            for (i = 0; i < rdls_b.length; i++) {
+                if (rdls_b[i].checked) {
+                    prb_ans = rdls_b[i].value;
+                    break;
+                }
+            }
+            for (i = 0; i < rdls_c.length; i++) {
+                if (rdls_c[i].checked) {
+                    prc_ans = rdls_c[i].value;
+                    break;
+                }
+            }
+            for (i = 0; i < rdls_d.length; i++) {
+                if (rdls_d[i].checked) {
+                    prd_ans = rdls_d[i].value;
+                    break;
+                }
+            }
+            for (i = 0; i < rdls_e.length; i++) {
+                if (rdls_e[i].checked) {
+                    pre_ans = rdls_e[i].value;
+                    break;
+                }
+            }
+            for (i = 0; i < rdls_f.length; i++) {
+                if (rdls_f[i].checked) {
+                    prf_ans = rdls_f[i].value;
+                    break;
+                }
+            }
+            evaluationFun(pra_ans, prb_ans, prc_ans, prd_ans, pre_ans, prf_ans);
+            return true;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="tittle">Quiz</h1>
+        <p class="decs">Please answer the Quiz below. You will receive 2.5 points for every correct answer and lose
+            three points for every incorrect answer submitted.</p>
+        <form class="questions" action="javascript:answerExtract()">
+            <div class="q">
+                <ul>What is the longest river in the world?<span id="aLab"> </span>
+                    <li><input type="radio" name="ans1" id="prb-a" value="nile"> Nile</li>
+                    <li><input type="radio" name="ans1" id="prb-a" value="amazon"> Amazon</li>
+                    <li><input type="radio" name="ans1" id="prb-a" value="yangtze"> Yangtze</li>
+                </ul>
+            </div>
+            <div class="q">
+                <ul>How many sides are there in a triangle?<span id="bLab"> </span>
+                    <li><input type="radio" name="ans2" id="prb-b" value="4"> 4</li>
+                    <li><input type="radio" name="ans2" id="prb-b" value="3"> 3</li>
+                    <li><input type="radio" name="ans2" id="prb-b" value="0"> 0</li>
+                </ul>
+            </div>
+            <div class="q">
+                <ul>What is the top color in a rainbow?<span id="cLab"> </span>
+                    <li><input type="radio" name="ans3" id="prb-c" value="red"> Red</li>
+                    <li><input type="radio" name="ans3" id="prb-c" value="yello"> Yello</li>
+                    <li><input type="radio" name="ans3" id="prb-c" value="green"> Green</li>
+                </ul>
+            </div>
+            <div class="q">
+                <ul>Which is the largest ocean in the world?<span id="dLab"> </span>
+                    <li><input type="radio" name="ans4" id="prb-d" value="pacific"> Pacific Ocean</li>
+                    <li><input type="radio" name="ans4" id="prb-d" value="atlantic"> Atlantic Ocean</li>
+                    <li><input type="radio" name="ans4" id="prb-d" value="tats"> There are the same</li>
+                </ul>
+            </div>
+            <div class="q">
+                <ul> Which continent is known as ‘Dark’ continent?<span id="eLab"> </span>
+                    <li><input type="radio" name="ans5" id="prb-e" value="sodan"> Sodan</li>
+                    <li><input type="radio" name="ans5" id="prb-e" value="asia"> Asia</li>
+                    <li><input type="radio" name="ans5" id="prb-e" value="africa"> Africa</li>
+                </ul>
+            </div>
+            <div class="q">
+                <ul>Which is the fastest animal on the land?<span id="fLab"> </span>
+                    <li><input type="radio" name="ans6" id="prb-f" value="lion"> Lion</li>
+                    <li><input type="radio" name="ans6" id="prb-f" value="cheetah"> Cheetah</li>
+                    <li><input type="radio" name="ans6" id="prb-f" value="camal"> Camal</li>
+                </ul>
+            </div>
+            <input type="submit" value="Submit Your Answers" class="btn">
+            <br>
+        </form>
+        <p id="wlm"></p>
+    </div>
+    <div class="copy-right">
+        <p>© 2020 All rights reserved | Design by <a href="https://www.facebook.com/mohamed.abosido"
+                target="_blank">Mohamed Absido</a></p>
+    </div>
+
+</body>
+
+</html>

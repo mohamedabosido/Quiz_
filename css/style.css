@@ -1,0 +1,99 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    color: #585858;
+    background-color: #fafafa;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+.container{
+    width: 70%;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+    color: #4d61fc;
+}
+strong{
+    color: #3b3663;
+    font-size: 28px;
+    text-align: center;
+}
+
+
+.tittle{
+    color: #3b3663;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -1px;
+    text-align: center;
+    font-weight: 400;
+    padding-top: 20px;
+    
+}
+
+.welcome-section{
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    width: 50%;
+    border-radius: 8px;
+    text-align: center;
+    height: 400px;
+}
+.welcome-section .fa ,.create-section .fa{
+    color: #4d61fc;
+}
+.form .form-row .fa{
+    font-size: 16px;
+    position: absolute;
+    margin-right: 1000px;
+    color: #696687;
+    opacity: .3;
+    left: 60%;
+    margin-top: 20px;
+}
+.form .form-row .input-form{
+    padding: 10px;
+    text-transform: capitalize;
+    background-color: #fffefe;
+    border: 0;
+    margin: auto;
+    margin: 10px;
+    color: #354052;
+    border-bottom: 2px solid #EEE;
+    font-size: 15px;
+    border-radius: 5px;
+    width: 350px;
+    height: 40px;
+}
+.btn{
+    margin-top: 20px;
+    margin-left: 40px;
+    float: left;
+    align-items: center;
+    background: #4d61fc;
+    border-radius: 6px;
+    border: 0;
+    color: #fff;
+    font-size: 16px;
+    padding: 15px 45px;
+    font-weight: 600;
+    transition: all .5s;
+}
+.btn:hover{
+    background-color: #223bf8;
+    margin-top: 17px ;
+}
+
+.copy-right{
+    color: #696687;
+    font-size: 18px;
+    opacity: .8;
+    line-height: 28px;
+    text-align: center;
+    padding: 0 15px;
+    margin-top: 35px;
+}
